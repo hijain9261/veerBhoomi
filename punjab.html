@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punjab - Voices of Freedom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #111111;
+            color: #eaeaea;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Teko', sans-serif;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            color: #E85A0C; /* Rich saffron */
+        }
+
+        h2 {
+            color: #0A6B3E; /* Deep green */
+        }
+
+        h3 {
+            color: #E2A857; /* Gold tint */
+        }
+
+        .fade-in {
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Premium Card */
+        .premium-card {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .premium-card:hover {
+            transform: scale(1.04);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Gallery hover glow */
+        .gallery-img {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(232, 90, 12, 0.5);
+        }
+    </style>
+</head>
+
+<body class="light">
+
+    <!-- Theme Toggle -->
+    <button id="theme-toggle"
+        class="fixed top-4 right-4 z-50 p-3 rounded-full bg-white/30 dark:bg-black/30 backdrop-blur-sm shadow-lg">
+        <svg id="theme-icon-light" class="h-6 w-6 theme-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+        <svg id="theme-icon-dark" class="h-6 w-6 theme-icon hidden" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+        </svg>
+    </button>
+
+    <!-- Page Content -->
+    <main class="p-6 md:p-12 fade-in">
+        <h1 class="text-5xl md:text-7xl font-bold drop-shadow-md">Punjab</h1>
+        <h2 class="text-2xl md:text-3xl mb-6">Stories of Freedom</h2>
+
+        <p class="text-lg md:text-xl mb-8 max-w-4xl leading-relaxed">
+            Punjab has always been the land of courage, sacrifice, and revolutionary spirit. From early resistance
+            against the British Raj to the brave acts of young revolutionaries, Punjab’s contribution to India’s
+            independence is legendary. Its warriors, poets, and thinkers stood unyielding, shaping the destiny of
+            the nation.
+        </p>
+
+        <!-- Hero Image -->
+        <img src="D:\MyFirstProject\punjab freedom struglle new.jpg" alt="Punjab Freedom"
+            class="w-full max-w-4xl rounded-2xl shadow-lg mb-8 border-4 border-[#E85A0C]">
+
+        <p><span class="font-bold">
+            Punjab — the land of valor, spirit, and unyielding courage. From the fertile fields to the battlefields,
+            Punjab’s sons and daughters carried the fight for freedom with unmatched determination. Revolutionary acts,
+            mass protests, and the indomitable bravery of martyrs like Bhagat Singh and Udham Singh turned Punjab into a
+            crucible of resistance. Every sacrifice, every uprising, every anthem from this land echoed across India —
+            "freedom was non-negotiable."
+        </span></p>
+
+        <!-- Notable Figures Section -->
+        <h3 class="text-3xl font-bold mt-8 mb-4">Notable Freedom Fighters</h3>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div class="premium-card rounded-xl overflow-hidden">
+                <img src="D:\MyFirstProject\bhagat singh.jpeg" alt="Bhagat Singh" class="w-full h-64 object-cover">
+                <div class="p-4">
+                    <h4 class="text-xl font-bold">Bhagat Singh</h4>
+                    <p class="text-sm">Revolutionary and icon of India’s youth, famous for his bold acts against the British.</p>
+                </div>
+            </div>
+            <div class="premium-card rounded-xl overflow-hidden">
+                <img src="D:\MyFirstProject\udham singh.webp" alt="Udham Singh" class="w-full h-64 object-cover">
+                <div class="p-4">
+                    <h4 class="text-xl font-bold">Udham Singh</h4>
+                    <p class="text-sm">Avenged the Jallianwala Bagh massacre, became a symbol of relentless justice.</p>
+                </div>
+            </div>
+            <div class="premium-card rounded-xl overflow-hidden">
+                <img src="D:\MyFirstProject\raja sagarmal.jpeg" alt="Raja Sagarmal" class="w-full h-64 object-cover">
+                <div class="p-4">
+                    <h4 class="text-xl font-bold">Raja Sagarmal</h4>
+                    <p class="text-sm">Led local revolts against colonial policies in Punjab’s princely states.</p>
+                </div>
+            </div>
+            <div class="premium-card rounded-xl overflow-hidden">
+                <img src="D:\MyFirstProject\lala lajpat ray.jpeg" alt="Lala Lajpat Rai" class="w-full h-64 object-cover">
+                <div class="p-4">
+                    <h4 class="text-xl font-bold">Lala Lajpat Rai</h4>
+                    <p class="text-sm">Prominent nationalist leader, known as the “Lion of Punjab” for his fearless leadership.</p>
+                </div>
+            </div>
+            <div class="premium-card rounded-xl overflow-hidden">
+                <img src="D:\MyFirstProject\saheed kaur.jpeg" alt="Shaheed Kaur" class="w-full h-64 object-cover">
+                <div class="p-4">
+                    <h4 class="text-xl font-bold">Shaheed Kaur</h4>
+                    <p class="text-sm">One of the courageous women who participated actively in Punjab’s freedom struggle.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Events -->
+        <h3 class="text-3xl font-bold mt-12 mb-4">Key Events in Punjab's Freedom Struggle</h3>
+        <ul class="list-disc ml-6 text-lg space-y-2">
+            <li>Revolutionary Movements – Acts of resistance against British colonial rule across Punjab.</li>
+            <li>Jallianwala Bagh Massacre (1919) – Sparked mass protests and revolutionary fervor.</li>
+            <li>Non-Cooperation & Civil Disobedience – Widespread participation of Punjabis in Gandhi-led movements.</li>
+            <li>Actions of Bhagat Singh & Associates – Bold protests and symbolic acts that shook the British.</li>
+            <li>Udham Singh’s vengeance – Avenged colonial atrocities, becoming a legendary martyr.</li>
+        </ul>
+
+        <!-- Photo Gallery -->
+        <h3 class="text-3xl font-bold mt-12 mb-4">Historical Photo Gallery</h3>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <img src="D:\MyFirstProject\jalian wa;;ah bagh.jpeg" class="rounded-lg shadow-md gallery-img" alt="Historical photo of Punjab 1">
+            <img src="D:\MyFirstProject\jalianwala bagh.jpeg" class="rounded-lg shadow-md gallery-img" alt="Historical photo of Punjab 2">
+            <img src="D:\MyFirstProject\punjab province.avif" class="rounded-lg shadow-md gallery-img" alt="Historical photo of Punjab 3">
+            <img src="D:\MyFirstProject\golden emple.jpeg" class="rounded-lg shadow-md gallery-img" alt="Historical photo of Punjab 5">
+            <img src="D:\MyFirstProject\quit india movement.avif" class="rounded-lg shadow-md gallery-img" alt="Historical photo of Punjab 6">
+        </div>
+
+        <!-- Back Button -->
+        <a href="index.html"
+            class="mt-10 inline-block px-6 py-3 bg-[#E85A0C] text-white rounded-xl shadow-lg hover:scale-105 transition">
+            ← Back to Main Page
+        </a>
+    </main>
+
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const body = document.body;
+        const lightIcon = document.getElementById('theme-icon-light');
+        const darkIcon = document.getElementById('theme-icon-dark');
+
+        const applyTheme = (theme) => {
+            if (theme === 'dark') {
+                body.classList.remove('light');
+                body.classList.add('dark');
+                lightIcon.classList.add('hidden');
+                darkIcon.classList.remove('hidden');
+            } else {
+                body.classList.remove('dark');
+                body.classList.add('light');
+                lightIcon.classList.remove('hidden');
+                darkIcon.classList.add('hidden');
+            }
+        };
+
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            applyTheme(savedTheme);
+        } else {
+            applyTheme(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            const currentTheme = body.classList.contains('dark') ? 'dark' : 'light';
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            localStorage.setItem('theme', newTheme);
+            applyTheme(newTheme);
+        });
+    </script>
+</body>
+
+</html>

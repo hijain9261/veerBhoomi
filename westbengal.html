@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>West Bengal - Voices of Freedom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #111111;
+            /* Softer black */
+            color: #eaeaea;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Teko', sans-serif;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            color: #E85A0C;
+        }
+
+        /* Rich saffron */
+        h2 {
+            color: #0A6B3E;
+        }
+
+        /* Deep green */
+        h3 {
+            color: #E2A857;
+        }
+
+        /* Gold tint */
+        .fade-in {
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Premium Card */
+        .premium-card {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .premium-card:hover {
+            transform: scale(1.04);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Gallery hover glow */
+        .gallery-img {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(232, 90, 12, 0.5);
+        }
+    </style>
+</head>
+
+<body class="light">
+
+    <!-- Theme Toggle -->
+    <button id="theme-toggle"
+        class="fixed top-4 right-4 z-50 p-3 rounded-full bg-white/30 dark:bg-black/30 backdrop-blur-sm shadow-lg">
+        <svg id="theme-icon-light" class="h-6 w-6 theme-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+        <svg id="theme-icon-dark" class="h-6 w-6 theme-icon hidden" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+        </svg>
+    </button>
+
+    <!-- Page Content -->
+    <main class="p-6 md:p-12 fade-in">
+        <h1 class="text-5xl md:text-7xl font-bold drop-shadow-md">West Bengal</h1>
+        <h2 class="text-2xl md:text-3xl mb-6">Stories of Freedom</h2>
+
+        <p class="text-lg md:text-xl mb-8 max-w-4xl leading-relaxed">
+            West Bengal played a pivotal role in India's struggle for independence — home to revolutionaries,
+            thinkers, and mass movements that challenged colonial rule. From the intellectual awakening of the
+            <span class="font-bold">Bengal Renaissance</span> to the fierce courage of its freedom fighters,
+            Bengal’s voice roared against oppression, inspiring the entire nation.
+        </p>
+
+        <!-- Hero Image -->
+        <img src="kolkata-west-bengal-india-october-260nw-1212252706.jpg" alt="West Bengal Freedom"
+            class="w-full max-w-4xl rounded-2xl shadow-lg mb-8 border-4 border-[#E85A0C]">
+        <p><span class="font-bold">
+            West Bengal was the furnace where the fire of India’s freedom was forged.
+            It gave the nation its fiercest revolutionaries, sharpest thinkers, and most enduring movements. From the
+            Bengal Renaissance that awakened minds, to the Swadeshi and Quit India movements that shook colonial power,
+            Bengal stood as both the brain and the heartbeat of the independence struggle. Every martyr, every protest,
+            every song from this land carried a single message — "Bharat must be free."</span>
+        </p>
+        <!-- Notable Figures Section -->
+        <h3 class="text-3xl font-bold mt-8 mb-4">Notable Freedom Fighters</h3>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div class="premium-card rounded-xl overflow-hidden">
+                <img src="netaji.jpg" alt="Netaji" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h4 class="text-xl font-bold">Netaji Subhas Chandra Bose</h4>
+                    <p class="text-sm">Leader of the Indian National Army, a symbol of defiance against British rule.
+                    </p>
+                </div>
+            </div>
+            <div class="premium-card rounded-xl overflow-hidden">
+                <img src="khudiram.jpng.avif" alt="Khudiram Bose" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h4 class="text-xl font-bold">Khudiram Bose</h4>
+                    <p class="text-sm">Youngest martyr of the freedom struggle, known for his courage at just 18.</p>
+                </div>
+            </div>
+            <div class="premium-card rounded-xl overflow-hidden">
+                <img src="download.jpg" alt="Matangini Hazra" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h4 class="text-xl font-bold">Matangini Hazra</h4>
+                    <p class="text-sm">Known as ‘Gandhi Buri’, she led protests during Quit India Movement.</p>
+                </div>
+            </div>
+            <div class="premium-card rounded-xl overflow-hidden">
+                <img src="tagore.jpg" alt="Rabindranath Tagore" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h4 class="text-xl font-bold">Rabindranath Tagore</h4>
+                    <p class="text-sm">Nobel laureate poet who renounced knighthood to protest British brutality.</p>
+                </div>
+            </div>
+            <div class="premium-card rounded-xl overflow-hidden">
+                <img src="dinesh.jpg" alt="Dinesh Gupta" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h4 class="text-xl font-bold">Dinesh Gupta</h4>
+                    <p class="text-sm">Revolutionary involved in the Writers’ Building attack of 1930.</p>
+                </div>
+            </div>
+            <div class="premium-card rounded-xl overflow-hidden">
+                <img src="preetilata.webp" alt="Pritilata Waddedar" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h4 class="text-xl font-bold">Pritilata Waddedar</h4>
+                    <p class="text-sm">Led the Pahartali European Club attack, embraced martyrdom for the cause.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Events -->
+        <h3 class="text-3xl font-bold mt-12 mb-4">Key Events in West Bengal's Freedom Struggle</h3>
+        <ul class="list-disc ml-6 text-lg space-y-2">
+            <li>Bengal Renaissance – Awakening of art, literature, and reformist thought.</li>
+            <li>Partition of Bengal (1905) and Swadeshi Movement – Boycott of British goods, promotion of indigenous
+                industry.</li>
+            <li>Chittagong Armoury Raid – Masterminded by Surya Sen in 1930.</li>
+            <li>Quit India Movement – Widespread protests and defiance in Bengal.</li>
+            <li>Formation of Indian National Army – Led by Netaji to militarily confront British forces.</li>
+        </ul>
+
+        <!-- Photo Gallery -->
+        <h3 class="text-3xl font-bold mt-12 mb-4">Historical Photo Gallery</h3>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <img src="gallery1.jpg" class="rounded-lg shadow-md gallery-img" alt="">
+            <img src="gallery2.jpg" class="rounded-lg shadow-md gallery-img" alt="">
+            <img src="gallery3.jpg" class="rounded-lg shadow-md gallery-img" alt="">
+            <img src="gallery4.jpg" class="rounded-lg shadow-md gallery-img" alt="">
+            <img src="gallery5.jpg" class="rounded-lg shadow-md gallery-img" alt="">
+            <img src="gallery6.jpg" class="rounded-lg shadow-md gallery-img" alt="">
+        </div>
+
+        <!-- Back Button -->
+        <a href="index.html"
+            class="mt-10 inline-block px-6 py-3 bg-[#E85A0C] text-white rounded-xl shadow-lg hover:scale-105 transition">
+            ← Back to Main Page
+        </a>
+    </main>
+
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const body = document.body;
+        const lightIcon = document.getElementById('theme-icon-light');
+        const darkIcon = document.getElementById('theme-icon-dark');
+
+        const applyTheme = (theme) => {
+            if (theme === 'dark') {
+                body.classList.remove('light');
+                body.classList.add('dark');
+                lightIcon.classList.add('hidden');
+                darkIcon.classList.remove('hidden');
+            } else {
+                body.classList.remove('dark');
+                body.classList.add('light');
+                lightIcon.classList.remove('hidden');
+                darkIcon.classList.add('hidden');
+            }
+        };
+
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            applyTheme(savedTheme);
+        } else {
+            applyTheme(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            const currentTheme = body.classList.contains('dark') ? 'dark' : 'light';
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            localStorage.setItem('theme', newTheme);
+            applyTheme(newTheme);
+        });
+    </script>
+</body>
+
+</html>

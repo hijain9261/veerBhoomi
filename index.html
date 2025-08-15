@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en" class="dark"> <!-- Default to dark mode -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>79th Independence Day - Voices of Freedom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom font and base styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Teko', sans-serif;
+        }
+
+        /* --- Day Mode --- */
+        .light {
+            background-color: #FDF6E3; /* Soft cream */
+            color: #374151; /* Dark gray */
+        }
+        .light .hero-bg {
+            background-image: linear-gradient(to bottom, rgba(253, 246, 227, 0.6), rgba(253, 246, 227, 1)), url('https://images.unsplash.com/photo-1532375836368-f951a45a6b35?q=80&w=2070&auto=format&fit=crop');
+        }
+        .light .card {
+            background-color: rgba(255, 255, 255, 0.7);
+            border-color: #D1D5DB; /* Light gray border */
+        }
+        .light .card-text, .light .section-text { color: #1f2937; }
+        .light .theme-icon { color: #F59E0B; } /* Sun color */
+        .light .journey-section { background-color: #FDF6E3; }
+        .light .timeline-card { background-color: #FFFFFF; }
+
+
+        /* --- Night Mode --- */
+.dark {
+    background-color: #202124; /* Google dark gray */
+    color: #E5E7EB;
+}
+        .dark .hero-bg {
+            background-image: linear-gradient(to bottom, rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 1)), url('https://images.unsplash.com/photo-1622468213985-a4a42a792e34?q=80&w=2070&auto=format&fit=crop');
+        }
+        .dark .card {
+            background-color: rgba(23, 23, 23, 0.7);
+            border-color: #4B5563; /* Darker gray border */
+        }
+        .dark .card-text, .dark .section-text { color: #d1d5db; }
+        .dark .theme-icon { color: #93C5FD; } /* Moon color */
+        .dark .journey-section { background-color: #0a0a0a; }
+        .dark .timeline-card { background-color: #171717; }
+
+        /* Interactive Card Hover Effect */
+        .card {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -150%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(255, 153, 51, 0.5), rgba(255, 255, 255, 0.6), rgba(19, 136, 8, 0.5), transparent);
+            transform: skewX(-30deg);
+            transition: left 0.6s ease;
+        }
+        .card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        .card:hover::before {
+            left: 150%;
+        }
+        .card-image {
+            transition: transform 0.3s ease;
+        }
+        .card:hover .card-image {
+            transform: scale(1.1);
+        }
+        
+        /* Timeline Specific Styles */
+        .timeline-item {
+            position: relative;
+            padding-left: 2.5rem;
+            padding-bottom: 2rem;
+            border-left: 2px solid #4B5563;
+        }
+        .timeline-item:last-child {
+            border-left: 2px solid transparent;
+            padding-bottom: 0;
+        }
+        .timeline-dot {
+            position: absolute;
+            left: -0.7rem;
+            top: 0;
+            height: 1.25rem;
+            width: 1.25rem;
+            border-radius: 9999px;
+            border-width: 3px;
+        }
+    </style>
+</head>
+<body class="light">
+
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" class="fixed top-4 right-4 z-50 p-3 rounded-full bg-white/30 dark:bg-black/30 backdrop-blur-sm shadow-lg">
+        <!-- Sun Icon -->
+        <svg id="theme-icon-light" class="h-6 w-6 theme-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+        <!-- Moon Icon -->
+        <svg id="theme-icon-dark" class="h-6 w-6 theme-icon hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+        </svg>
+    </button>
+
+    <main>
+        <div class="hero-bg bg-cover bg-center">
+            <div class="min-h-screen flex flex-col items-center justify-center text-center p-6">
+                <h1 class="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter uppercase drop-shadow-xl">
+                    <span class="text-[#FF9933]">79</span> <span class="text-[#000080]">Years of</span> <span class="text-[#138808]">Freedom</span>
+                </h1>
+                <p class="text-xl md:text-2xl mt-4 max-w-4xl mx-auto drop-shadow-lg card-text">
+                    Celebrating the indomitable spirit of India. Explore the stories of courage and sacrifice from the premier states that shaped our nation's destiny.
+                </p>
+
+                <!-- Interactive State Selection Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8 mt-12 w-full max-w-7xl">
+                    <a href="westbengal.html" class="card block border-2 rounded-2xl backdrop-blur-sm"><div class="relative h-48 overflow-hidden rounded-t-xl"><img src="D:\MyFirstProject\Westbengal.jpeg" alt="West Bengal" class="card-image w-full h-full object-cover"></div><div class="p-4"><h3 class="text-2xl font-bold card-text">West Bengal</h3></div></a>
+                    <a href="madras.html" class="card block border-2 rounded-2xl backdrop-blur-sm"><div class="relative h-48 overflow-hidden rounded-t-xl"><img src="D:\MyFirstProject\WhatsApp Image 2025-08-15 at 15.12.36_f2272a9c.jpg" alt="Madras" class="card-image w-full h-full object-cover"></div><div class="p-4"><h3 class="text-2xl font-bold card-text">Madras</h3></div></a>
+                    <a href="mumbai.html" class="card block border-2 rounded-2xl backdrop-blur-sm"><div class="relative h-48 overflow-hidden rounded-t-xl"><img src="D:\MyFirstProject\Mumbai.jpeg" alt="Mumbai" class="card-image w-full h-full object-cover"></div><div class="p-4"><h3 class="text-2xl font-bold card-text">Mumbai</h3></div></a>
+                    <a href="rajasthan.html" class="card block border-2 rounded-2xl backdrop-blur-sm"><div class="relative h-48 overflow-hidden rounded-t-xl"><img src="D:\MyFirstProject\rajasthan.jpg" alt="Rajasthan" class="card-image w-full h-full object-cover"></div><div class="p-4"><h3 class="text-2xl font-bold card-text">Rajasthan</h3></div></a>
+                    <a href="punjab.html" class="card block border-2 rounded-2xl backdrop-blur-sm"><div class="relative h-48 overflow-hidden rounded-t-xl"><img src="D:\MyFirstProject\Harmandir-Sahib-Amritsar-Punjab-India.webp" alt="Punjab" class="card-image w-full h-full object-cover"></div><div class="p-4"><h3 class="text-2xl font-bold card-text">Punjab</h3></div></a>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- India's Journey Section -->
+        <section class="journey-section py-16 lg:py-24">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-5xl md:text-7xl font-bold uppercase">
+                        <span class="text-[#FF9933]">India's</span> <span class="text-[#138808]">Triumphant Journey</span>
+                    </h2>
+                    <p class="mt-4 text-lg max-w-3xl mx-auto section-text">From a 'Tryst with Destiny' to a global powerhouse, India's story is one of resilience, innovation, and unwavering spirit. A journey of a billion dreams, marked by formidable challenges and extraordinary achievements.</p>
+                </div>
+
+                <div class="mt-20 max-w-4xl mx-auto">
+                    <!-- Timeline Start -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot border-[#FF9933] bg-[#FF9933]"></div>
+                        <div class="timeline-card p-6 rounded-2xl shadow-lg">
+                            <time class="text-sm font-semibold uppercase tracking-widest text-[#FF9933]">August 15, 1947</time>
+                            <h3 class="text-3xl mt-1">Independence of India</h3>
+                            <img src="D:\MyFirstProject\indepnednce f india.jpg">
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot border-[#000080] bg-[#000080]"></div>
+                        <div class="timeline-card p-6 rounded-2xl shadow-lg">
+                            <time class="text-sm font-semibold uppercase tracking-widest text-[#000080]">January 26, 1950</time>
+                            <h3 class="text-3xl mt-1">Adoption of the Constitution</h3>
+                            <img src="D:\MyFirstProject\Constuttion.jpg" alt="Constitution of India" class="mt-4 rounded-lg shadow-md">
+                            <p class="mt-2 section-text">The Constitution of India is the supreme legal document of India, and the longest written national constitution in the world. The document lays down the framework that demarcates fundamental political code, structure, procedures, powers, and duties of government institutions and sets out fundamental rights, directive principles, and the duties of citizens.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot border-[#138808] bg-[#138808]"></div>
+                        <div class="timeline-card p-6 rounded-2xl shadow-lg">
+                            <time class="text-sm font-semibold uppercase tracking-widest text-[#138808]">1960s–70s</time>
+                            <h3 class="text-3xl mt-1">The Green Revolution</h3>
+                            <img src="D:\MyFirstProject\Green revolution.jpeg" alt="Green Revolution in India" class="mt-4 rounded-lg shadow-md">
+                            <p class="mt-2 section-text">Starting in the late 1960s, this revolution was a period of major agricultural transformation in India. Spearheaded by scientist Dr. M.S. Swaminathan, with support from international scientist Norman Borlaug, it involved the introduction of high-yielding variety (HYV) seeds, modern irrigation techniques, and the use of fertilizers and pesticides. This movement dramatically increased India's food grain production, especially wheat and rice. It transformed the nation from a food-deficient country, often reliant on imports, into a self-sufficient agricultural powerhouse, ensuring food security for its growing population.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot border-[#000080] bg-[#000080]"></div>
+                        <div class="timeline-card p-6 rounded-2xl shadow-lg">
+                            <time class="text-sm font-semibold uppercase tracking-widest text-[#000080]">1971</time>
+                            <h3 class="text-3xl mt-1">The Indo-Pak War (Liberation of Bangladesh)</h3>
+                            <img src="https://www.jammukashmirnow.com/Encyc/2023/12/16/qwewq_202312161145584571_H%40%40IGHT_420_W%40%40IDTH_802.png" alt="1971 Indo-Pak War Surrender" class="mt-4 rounded-lg shadow-md">
+                            <p class="mt-2 section-text">Fought in December 1971, this war is a profound source of national pride and a landmark military victory. Under the strong political leadership of Prime Minister Indira Gandhi and the brilliant military strategy of General Sam Manekshaw, the Indian Armed Forces achieved a decisive win in just 13 days. The conflict resulted in the liberation of East Pakistan and the creation of the sovereign nation of Bangladesh. This victory not only established India's military dominance in the region but also resolved a massive refugee crisis, marking a moment of great emotional triumph for the nation.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot border-[#FF9933] bg-[#FF9933]"></div>
+                        <div class="timeline-card p-6 rounded-2xl shadow-lg">
+                            <time class="text-sm font-semibold uppercase tracking-widest text-[#FF9933]">1998</time>
+                            <h3 class="text-3xl mt-1">The Pokhran Nuclear Tests</h3>
+                            <img src="https://images.indianexpress.com/2018/05/pokhran.jpg" alt="Pokhran Nuclear Test" class="mt-4 rounded-lg shadow-md">
+                            <p class="mt-2 section-text">Following the initial test in 1974 ('Smiling Buddha'), India conducted a series of five nuclear tests known as Pokhran-II in May 1998. The operation was executed under the government of Prime Minister Atal Bihari Vajpayee, with pivotal roles played by scientists like Dr. A.P.J. Abdul Kalam. These tests officially declared India a nuclear-weapon state, establishing a policy of credible minimum deterrence. This bold move significantly enhanced India's national security and projected its strength and scientific self-reliance on the global stage.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot border-[#138808] bg-[#138808]"></div>
+                        <div class="timeline-card p-6 rounded-2xl shadow-lg">
+                            <time class="text-sm font-semibold uppercase tracking-widest text-[#138808]">June 25, 1983</time>
+                            <h3 class="text-3xl mt-1">1983 Cricket World Cup Victory</h3>
+                            <img src="D:\MyFirstProject\1983.jpeg" alt="1983 Cricket World Cup Victory" class="mt-4 rounded-lg shadow-md">
+                            <p class="mt-2 section-text">On June 25, 1983, India achieved one of its most cherished sporting triumphs by winning the Cricket World Cup. Led by the inspirational all-rounder Kapil Dev, the Indian team, considered massive underdogs, defeated the formidable two-time champions, the West Indies, at Lord's Cricket Ground in London. This stunning victory was a watershed moment that transformed cricket from a sport into a national passion. It sparked immense national pride and instilled a powerful sense of self-belief that India could compete with and beat the best in the world. 🏆</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot border-[#000080] bg-[#000080]"></div>
+                        <div class="timeline-card p-6 rounded-2xl shadow-lg">
+                            <time class="text-sm font-semibold uppercase tracking-widest text-[#000080]">1991</time>
+                            <h3 class="text-3xl mt-1">LPG Economic Reforms</h3>
+                            <img src="https://images.livemint.com/rf/Image-621x414/LiveMint/Period2/2016/10/14/Photos/Opinion/lib-kQUF--621x414@LiveMint.jpg" alt="LPG Reforms 1991" class="mt-4 rounded-lg shadow-md">
+                            <p class="mt-2 section-text">The LPG (Liberalisation, Privatisation, and Globalisation) reforms were a series of major economic policies introduced in 1991. This economic revolution was spearheaded by Prime Minister P.V. Narasimha Rao and his Finance Minister, Dr. Manmohan Singh, in response to a severe balance of payments crisis. The reforms dismantled the "Licence Raj," opening up the Indian economy to private and foreign investment. This momentous shift moved India away from a state-controlled economy, unleashing its market potential and paving the way for decades of rapid economic growth. 📈</p>
+                        </div>
+                    </div>
+                     <div class="timeline-item">
+                        <div class="timeline-dot border-[#FF9933] bg-[#FF9933]"></div>
+                        <div class="timeline-card p-6 rounded-2xl shadow-lg">
+                            <time class="text-sm font-semibold uppercase tracking-widest text-[#FF9933]">October 22, 2008</time>
+                            <h3 class="text-3xl mt-1">Chandrayaan-1: First Moon Mission</h3>
+                            <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/bodyeditor/201907/IANS-e3cc624323ef5ff6f03acee01-1200x5472.jpg?uAsZiRmyLr2I79HQveGUfIniZcQpRwXE?size=750:*" alt="Chandrayaan-1 Mission" class="mt-4 rounded-lg shadow-md">
+                            <p class="mt-2 section-text">Launched on October 22, 2008, Chandrayaan-1 was India's first-ever lunar exploration mission. This historic project was conceived and executed by the Indian Space Research Organisation (ISRO) and involved thousands of its scientists and engineers. Its most profound contribution to science was the confirmed discovery of water molecules on the Moon's surface. This mission was a tremendous success, demonstrating India's advanced technological capability for interplanetary exploration and firmly placing it in the elite club of space-faring nations. 🌕🚀</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot border-[#138808] bg-[#138808]"></div>
+                        <div class="timeline-card p-6 rounded-2xl shadow-lg">
+                            <time class="text-sm font-semibold uppercase tracking-widest text-[#138808]">October 2, 2014</time>
+                            <h3 class="text-3xl mt-1">Swachh Bharat Abhiyan</h3>
+                            <img src="https://www.sftindia.in/wp-content/uploads/elementor/thumbs/swachh-bharat-abhiyan-q9l5ealpgbiuq85phj8jqeiillssw0ppu5r2lhmkx4.jpg" alt="Swachh Bharat Abhiyan" class="mt-4 rounded-lg shadow-md">
+                            <p class="mt-2 section-text">Launched on the birth anniversary of Mahatma Gandhi, the Swachh Bharat Abhiyan, led by Prime Minister Narendra Modi, became the world's largest sanitation and cleanliness drive. More than just a government policy, it transformed into a true 'Jan Andolan' (people's movement). It mobilized millions of citizens, from schoolchildren to celebrities, fostering a collective sense of responsibility and national pride in creating a cleaner, healthier India for future generations.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot border-[#000080] bg-[#000080]"></div>
+                        <div class="timeline-card p-6 rounded-2xl shadow-lg">
+                            <time class="text-sm font-semibold uppercase tracking-widest text-[#000080]">August 23, 2023</time>
+                            <h3 class="text-3xl mt-1">Chandrayaan-3: A Billion Dreams Land on the Moon</h3>
+                            <img src="https://currentaffairs.khanglobalstudies.com/wp-content/uploads/2024/04/chandrayaan-3.webp" alt="Chandrayaan-3 Landing" class="mt-4 rounded-lg shadow-md">
+                            <p class="mt-2 section-text">On this historic day, every Indian heart swelled with pride as Chandrayaan-3's Vikram lander made a flawless soft landing on the enigmatic south pole of the Moon. This wasn't just a scientific victory for ISRO; it was a deeply emotional moment for 1.4 billion people. We became the first nation to reach this unexplored region, a testament to our relentless spirit of inquiry and frugal innovation. The world watched in awe as India quietly and confidently achieved a dream that reached the stars.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot border-[#FF9933] bg-[#FF9933]"></div>
+                        <div class="timeline-card p-6 rounded-2xl shadow-lg">
+                            <time class="text-sm font-semibold uppercase tracking-widest text-[#FF9933]">2024</time>
+                            <h3 class="text-3xl mt-1">Operation Sindoor: Humanity Above All</h3>
+                            <img src="https://blueskyeducation.co.in/wp-content/uploads/2025/05/Work-From-Home-Freelance-Blog-Banner-2-1568x882.webp" alt="Operation Sindoor" class="mt-4 rounded-lg shadow-md">
+                            <p class="mt-2 section-text">In a world often divided by conflict, India reaffirmed its ancient ethos of 'Vasudhaiva Kutumbakam' (The world is one family). Operation Sindoor was more than a rescue mission; it was a promise kept. The swift and courageous evacuation of our citizens and foreign nationals from Oman was a powerful display of India's commitment to protecting life, no matter the nationality. It was a moment of profound relief and pride, showcasing India's growing role as a compassionate and reliable global partner.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot border-[#138808] bg-[#138808]"></div>
+                        <div class="timeline-card p-6 rounded-2xl shadow-lg">
+                            <time class="text-sm font-semibold uppercase tracking-widest text-[#138808]">August 15, 2025</time>
+                            <h3 class="text-3xl mt-1">Celebrating 79 Years of an Unbreakable Spirit</h3>
+                            <p class="mt-2 section-text">Today, as we stand on the threshold of our 79th year of independence, we are not just a nation; we are a civilization reborn. We are the dreams of our freedom fighters, the sweat of our farmers, the intellect of our scientists, and the courage of our soldiers. Our journey has been a tapestry woven with threads of struggle and triumph. We look to the future with the confidence of a nation that has overcome every challenge and the hope of a billion hearts beating as one. Jai Hind!</p>
+                        </div>
+                    </div>
+                    <!-- Timeline End -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const body = document.body;
+        const lightIcon = document.getElementById('theme-icon-light');
+        const darkIcon = document.getElementById('theme-icon-dark');
+
+        // Function to apply the theme
+        const applyTheme = (theme) => {
+            if (theme === 'dark') {
+                body.classList.remove('light');
+                body.classList.add('dark');
+                lightIcon.classList.add('hidden');
+                darkIcon.classList.remove('hidden');
+            } else {
+                body.classList.remove('dark');
+                body.classList.add('light');
+                lightIcon.classList.remove('hidden');
+                darkIcon.classList.add('hidden');
+            }
+        };
+
+        // Check for saved theme in localStorage
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            applyTheme(savedTheme);
+        } else {
+            // Default to system preference if no theme is saved
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            applyTheme(prefersDark ? 'dark' : 'light');
+        }
+
+        // Event listener for the toggle button
+        themeToggleBtn.addEventListener('click', () => {
+            const currentTheme = body.classList.contains('dark') ? 'dark' : 'light';
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            localStorage.setItem('theme', newTheme);
+            applyTheme(newTheme);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mumbai - Voices of Freedom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body { font-family: 'Roboto', sans-serif; background-color: #111111; color: #eaeaea; }
+        h1,h2,h3 { font-family: 'Teko', sans-serif; letter-spacing: 1px; }
+        h1 { color: #E85A0C; } h2 { color: #0A6B3E; } h3 { color: #E2A857; }
+        .fade-in { animation: fadeIn 1.2s ease-in-out; }
+        @keyframes fadeIn { from {opacity:0; transform:translateY(10px);} to {opacity:1; transform:translateY(0);} }
+        .premium-card { background: linear-gradient(145deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02)); border:1px solid rgba(255,255,255,0.08); box-shadow:0 8px 24px rgba(0,0,0,0.4); transition:transform 0.3s ease, box-shadow 0.3s ease; }
+        .premium-card:hover { transform:scale(1.04); box-shadow:0 12px 28px rgba(0,0,0,0.6); }
+        .gallery-img { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .gallery-img:hover { transform:scale(1.05); box-shadow:0 0 20px rgba(232,90,12,0.5); }
+    </style>
+</head>
+
+<body class="light">
+    <button id="theme-toggle" class="fixed top-4 right-4 z-50 p-3 rounded-full bg-white/30 dark:bg-black/30 backdrop-blur-sm shadow-lg">
+        <svg id="theme-icon-light" class="h-6 w-6 theme-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+        </svg>
+        <svg id="theme-icon-dark" class="h-6 w-6 theme-icon hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+        </svg>
+    </button>
+
+    <main class="p-6 md:p-12 fade-in">
+        <h1 class="text-5xl md:text-7xl font-bold drop-shadow-md">Mumbai</h1>
+        <h2 class="text-2xl md:text-3xl mb-6">Stories of Freedom</h2>
+
+        <p class="text-lg md:text-xl mb-8 max-w-4xl leading-relaxed">
+            Mumbai, India’s commercial powerhouse, was a crucible of freedom. From trade unions to political uprisings, 
+            the city’s streets and ports resonated with the cries of independence.
+        </p>
+
+        <img src="mumbai-hero.jpg" alt="Mumbai Freedom" class="w-full max-w-4xl rounded-2xl shadow-lg mb-8 border-4 border-[#E85A0C]">
+
+        <p><span class="font-bold">
+            Leaders, activists, and ordinary citizens shaped the fight for independence, proving Mumbai’s heart beat for freedom.
+        </span></p>
+
+        <h3 class="text-3xl font-bold mt-8 mb-4">Notable Freedom Fighters</h3>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div class="premium-card rounded-xl overflow-hidden">
+                <img src="ambedkar.jpg" alt="B. R. Ambedkar" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h4 class="text-xl font-bold">B. R. Ambedkar</h4>
+                    <p class="text-sm">Leader, social reformer, and champion for equality and justice.</p>
+                </div>
+            </div>
+            <div class="premium-card rounded-xl overflow-hidden">
+                <img src="gokhale.jpg" alt="Gopal Krishna Gokhale" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h4 class="text-xl font-bold">Gopal Krishna Gokhale</h4>
+                    <p class="text-sm">Moderate leader who shaped early Indian political thought and reforms.</p>
+                </div>
+            </div>
+            <div class="premium-card rounded-xl overflow-hidden">
+                <img src="dadabhai.jpg" alt="Dadabhai Naoroji" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h4 class="text-xl font-bold">Dadabhai Naoroji</h4>
+                    <p class="text-sm">‘Grand Old Man of India’, campaigned for India’s rights in British Parliament.</p>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="text-3xl font-bold mt-12 mb-4">Key Events in Mumbai's Freedom Struggle</h3>
+        <ul class="list-disc ml-6 text-lg space-y-2">
+            <li>Swadeshi and boycott movements in city markets and mills.</li>
+            <li>Labor strikes and protests in ports and factories.</li>
+            <li>Participation in Non-Cooperation and Quit India Movements.</li>
+        </ul>
+
+        <h3 class="text-3xl font-bold mt-12 mb-4">Historical Photo Gallery</h3>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <img src="mumbai-gallery1.jpg" class="rounded-lg shadow-md gallery-img" alt="">
+            <img src="mumbai-gallery2.jpg" class="rounded-lg shadow-md gallery-img" alt="">
+            <img src="mumbai-gallery3.jpg" class="rounded-lg shadow-md gallery-img" alt="">
+            <img src="mumbai-gallery4.jpg" class="rounded-lg shadow-md gallery-img" alt="">
+            <img src="mumbai-gallery5.jpg" class="rounded-lg shadow-md gallery-img" alt="">
+            <img src="mumbai-gallery6.jpg" class="rounded-lg shadow-md gallery-img" alt="">
+        </div>
+
+        <a href="index.html" class="mt-10 inline-block px-6 py-3 bg-[#E85A0C] text-white rounded-xl shadow-lg hover:scale-105 transition">
+            ← Back to Main Page
+        </a>
+    </main>
+
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const body = document.body;
+        const lightIcon = document.getElementById('theme-icon-light');
+        const darkIcon = document.getElementById('theme-icon-dark');
+        const applyTheme = theme => {
+            if(theme==='dark'){ body.classList.remove('light'); body.classList.add('dark'); lightIcon.classList.add('hidden'); darkIcon.classList.remove('hidden'); }
+            else{ body.classList.remove('dark'); body.classList.add('light'); lightIcon.classList.remove('hidden'); darkIcon.classList.add('hidden'); }
+        }
+        const savedTheme = localStorage.getItem('theme'); 
+        if(savedTheme) applyTheme(savedTheme); 
+        else applyTheme(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        themeToggleBtn.addEventListener('click', ()=>{ const currentTheme=body.classList.contains('dark')?'dark':'light'; const newTheme=currentTheme==='dark'?'light':'dark'; localStorage.setItem('theme',newTheme); applyTheme(newTheme); });
+    </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madras - Voices of Freedom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body { font-family: 'Roboto', sans-serif; background-color: #111111; color: #eaeaea; }
+        h1,h2,h3 { font-family: 'Teko', sans-serif; letter-spacing: 1px; }
+        h1 { color: #E85A0C; } h2 { color: #0A6B3E; } h3 { color: #E2A857; }
+        .fade-in { animation: fadeIn 1.2s ease-in-out; }
+        @keyframes fadeIn { from {opacity:0; transform:translateY(10px);} to {opacity:1; transform:translateY(0);} }
+        .premium-card { background: linear-gradient(145deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02)); border:1px solid rgba(255,255,255,0.08); box-shadow:0 8px 24px rgba(0,0,0,0.4); transition:transform 0.3s ease, box-shadow 0.3s ease; }
+        .premium-card:hover { transform:scale(1.04); box-shadow:0 12px 28px rgba(0,0,0,0.6); }
+        .gallery-img { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .gallery-img:hover { transform:scale(1.05); box-shadow:0 0 20px rgba(232,90,12,0.5); }
+    </style>
+</head>
+
+<body class="light">
+    <button id="theme-toggle" class="fixed top-4 right-4 z-50 p-3 rounded-full bg-white/30 dark:bg-black/30 backdrop-blur-sm shadow-lg">
+        <svg id="theme-icon-light" class="h-6 w-6 theme-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+        </svg>
+        <svg id="theme-icon-dark" class="h-6 w-6 theme-icon hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+        </svg>
+    </button>
+
+    <main class="p-6 md:p-12 fade-in">
+        <h1 class="text-5xl md:text-7xl font-bold drop-shadow-md">Madras</h1>
+        <h2 class="text-2xl md:text-3xl mb-6">Stories of Freedom</h2>
+
+        <p class="text-lg md:text-xl mb-8 max-w-4xl leading-relaxed">
+            Madras (now Chennai) was a center of political activism, social reform, and nationalist movements in southern India. 
+            Leaders from this region played crucial roles in India’s independence struggle.
+        </p>
+
+        <img src="D:\MyFirstProject\chennai freedome movement.jpg" alt="Madras Freedom" class="w-full max-w-4xl rounded-2xl shadow-lg mb-8 border-4 border-[#E85A0C]">
+
+        <p><span class="font-bold">
+            From early reformers to revolutionary figures, Madras contributed immensely to shaping the freedom movement in the South.
+        </span></p>
+
+        <h3 class="text-3xl font-bold mt-8 mb-4">Notable Freedom Fighters</h3>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div class="premium-card rounded-xl overflow-hidden">
+                <img src="c-rajagopalachari.jpg" alt="C. Rajagopalachari" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h4 class="text-xl font-bold">C. Rajagopalachari</h4>
+                    <p class="text-sm">First Indian Governor-General of India and a prominent freedom leader.</p>
+                </div>
+            </div>
+            <div class="premium-card rounded-xl overflow-hidden">
+                <img src="e-v-ramasamy.jpg" alt="E. V. Ramasamy" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h4 class="text-xl font-bold">E. V. Ramasamy (Periyar)</h4>
+                    <p class="text-sm">Social reformer and activist advocating equality and anti-caste movements.</p>
+                </div>
+            </div>
+            <div class="premium-card rounded-xl overflow-hidden">
+                <img src="subramania-bharati.jpg" alt="Subramania Bharati" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h4 class="text-xl font-bold">Subramania Bharati</h4>
+                    <p class="text-sm">Poet and nationalist whose writings inspired resistance and unity.</p>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="text-3xl font-bold mt-12 mb-4">Key Events in Madras's Freedom Struggle</h3>
+        <ul class="list-disc ml-6 text-lg space-y-2">
+            <li>Participation in Non-Cooperation and Civil Disobedience movements.</li>
+            <li>Formation of local Congress units and social reform movements.</li>
+            <li>Promotion of education and anti-colonial literature in Tamil Nadu.</li>
+        </ul>
+
+        <h3 class="text-3xl font-bold mt-12 mb-4">Historical Photo Gallery</h3>
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <img src="madras-gallery1.jpg" class="rounded-lg shadow-md gallery-img" alt="">
+            <img src="madras-gallery2.jpg" class="rounded-lg shadow-md gallery-img" alt="">
+            <img src="madras-gallery3.jpg" class="rounded-lg shadow-md gallery-img" alt="">
+            <img src="madras-gallery4.jpg" class="rounded-lg shadow-md gallery-img" alt="">
+            <img src="madras-gallery5.jpg" class="rounded-lg shadow-md gallery-img" alt="">
+            <img src="madras-gallery6.jpg" class="rounded-lg shadow-md gallery-img" alt="">
+        </div>
+
+        <a href="index.html" class="mt-10 inline-block px-6 py-3 bg-[#E85A0C] text-white rounded-xl shadow-lg hover:scale-105 transition">
+            ← Back to Main Page
+        </a>
+    </main>
+
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const body = document.body;
+        const lightIcon = document.getElementById('theme-icon-light');
+        const darkIcon = document.getElementById('theme-icon-dark');
+        const applyTheme = theme => { if(theme==='dark'){ body.classList.remove('light'); body.classList.add('dark'); lightIcon.classList.add('hidden'); darkIcon.classList.remove('hidden'); } else { body.classList.remove('dark'); body.classList.add('light'); lightIcon.classList.remove('hidden'); darkIcon.classList.add('hidden'); } }
+        const savedTheme = localStorage.getItem('theme'); if(savedTheme) applyTheme(savedTheme); else applyTheme(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        themeToggleBtn.addEventListener('click', ()=>{ const currentTheme=body.classList.contains('dark')?'dark':'light'; const newTheme=currentTheme==='dark'?'light':'dark'; localStorage.setItem('theme',newTheme); applyTheme(newTheme); });
+    </script>
+</body>
+</html>
